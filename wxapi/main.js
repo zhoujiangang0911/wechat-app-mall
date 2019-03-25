@@ -1,6 +1,6 @@
 // 小程序开发api接口工具包，https://github.com/gooking/wxapi
 const CONFIG = require('./config.js')
-const API_BASE_URL = 'https://api.it120.cc'
+const API_BASE_URL = 'https://api.it120.cc/fcb6be4e1c1d364b55711d1007953658'
 
 
 const request = (url, needSubDomain, method, data) => {

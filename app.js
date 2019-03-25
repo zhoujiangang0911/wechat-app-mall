@@ -5,6 +5,7 @@ App({
     const that = this;
     // 检测新版本
     const updateManager = wx.getUpdateManager()
+    console.log(updateManager)
     updateManager.onUpdateReady(function () {
       wx.showModal({
         title: '更新提示',
@@ -57,6 +58,11 @@ App({
     //  获取接口和后台权限
     WXAPI.vipLevel().then(res => {
       that.globalData.vipLevel = res.data
+    })
+    WXAPI.queryMobileLocation({ mobile: '17602153410' }).then(res => {
+      console.log('接口成功返回:', res)
+    }).catch(e => {
+      console.error('接口调用异常:', e)
     })
     //  获取商城名称
     WXAPI.queryConfig({
